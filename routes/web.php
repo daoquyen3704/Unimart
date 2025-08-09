@@ -21,4 +21,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'DashboardController@show')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@show')->name('dashboard')->middleware('auth');
